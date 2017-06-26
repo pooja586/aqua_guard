@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include aqua_guard *.css
+recursive-include aqua_guard *.csv
+recursive-include aqua_guard *.html
+recursive-include aqua_guard *.ico
+recursive-include aqua_guard *.js
+recursive-include aqua_guard *.json
+recursive-include aqua_guard *.md
+recursive-include aqua_guard *.png
+recursive-include aqua_guard *.py
+recursive-include aqua_guard *.svg
+recursive-include aqua_guard *.txt
+recursive-exclude aqua_guard *.pyc
