@@ -22,6 +22,8 @@ app_license = "MIT"
 # web_include_css = "/assets/aqua_guard/css/aqua_guard.css"
 # web_include_js = "/assets/aqua_guard/js/aqua_guard.js"
 
+fixtures = ["Custom Field", "Property Setter", "Print Format", "Report"]
+
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
 
@@ -131,5 +133,4 @@ doctype_js={
 # 	"frappe.desk.doctype.event.event.get_events": "aqua_guard.event.get_events"
 # }
 
-fixtures = ["Custom Field", "Property Setter", "Print Format", "Report"]
 
