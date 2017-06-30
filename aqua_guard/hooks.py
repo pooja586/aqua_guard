@@ -87,18 +87,16 @@ doctype_js={
 # Hook on document methods and events
 
 #"validate":["aqua_guard.custom_method.get_taxes","aqua_guard.custom_method.set_taxes"]
-# doc_events = {
-# 	"Quotation":{
-# 		"validate": "aqua_guard.custom_method.set_taxes",
-# 		"before_submit" :'aqua_guard.custom_method.get_taxes'
-
-# 	}
+doc_events = {
+	"Sales Invoice":{
+		"validate": "aqua_guard.custom_method.get_tax_in_words"
+	}
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
 #	}
- # }
+}
 
 # Scheduled Tasks
 # ---------------
