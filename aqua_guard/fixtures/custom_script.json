@@ -1,0 +1,47 @@
+[
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Quotation", 
+  "modified": "2017-06-24 13:31:59.091016", 
+  "name": "Quotation-Client", 
+  "script": "cur_frm.add_fetch(\"lead\", \"project\", \"project\");\ncur_frm.add_fetch(\"customer\", \"project\", \"project\");\n", 
+  "script_type": "Client"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Opportunity", 
+  "modified": "2017-06-24 13:12:58.470161", 
+  "name": "Opportunity-Client", 
+  "script": "cur_frm.add_fetch(\"customer\", \"project\", \"project\");\n", 
+  "script_type": "Client"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Sales Order", 
+  "modified": "2017-06-28 15:00:46.002227", 
+  "name": "Sales Order-Client", 
+  "script": "cur_frm.add_fetch(\"customer\", \"project\", \"project\");\n\nfrappe.ui.form.on(\"Sales Order\", {\n\tvalidate: function(frm) {\n\t\tfrm.doc.project = \"\"\n\t}\n})\n", 
+  "script_type": "Client"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Sales Invoice", 
+  "modified": "2017-06-29 12:39:40.755929", 
+  "name": "Sales Invoice-Client", 
+  "script": "cur_frm.add_fetch(\"customer\", \"project\", \"project\");\nfrappe.ui.form.on(\"Sales Invoice\", {\n\tvalidate: function(frm) {\n\t\tfrm.doc.project = \"\"\n\t}\n})", 
+  "script_type": "Client"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Delivery Note", 
+  "modified": "2017-06-29 12:36:32.566039", 
+  "name": "Delivery Note-Client", 
+  "script": "cur_frm.add_fetch(\"customer\", \"project\", \"project\");\n\nfrappe.ui.form.on(\"Delivery Note\", {\n\tvalidate: function(frm) {\n\t\tfrm.doc.project = \"\"\n\t}\n})\n\n", 
+  "script_type": "Client"
+ }
+]

@@ -133,4 +133,4 @@ doctype_js={
 # 	"frappe.desk.doctype.event.event.get_events": "aqua_guard.event.get_events"
 # }
 
-
+fixtures = ["Custom Field", "Property Setter", "Print Format", "Report", "Custom Script"]
