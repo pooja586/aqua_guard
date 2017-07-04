@@ -8,6 +8,7 @@ import frappe
 from setuptools import setup, find_packages
 from pip.req import parse_requirements
 import ast,json
+from frappe.utils import money_in_words
 
 
 
@@ -61,3 +62,11 @@ def set_tax(doc, dic):
 			tax.description = "item"
 			tax.rate = 0
 			tax.tax_amount = v
+
+@frappe.whitelist()
+def get_tax_in_words(doc,method):
+	# print "inside tax_____________________________________________________\n\n\n\n\n\n", tax_amount
+	tax_value = money_in_words(doc.total_taxes_and_charges)
+	print "\n\n\n_______________________________________",tax_value
+	doc.tax_in_words = tax_value
+	
