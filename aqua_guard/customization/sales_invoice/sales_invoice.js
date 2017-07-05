@@ -79,15 +79,15 @@ frappe.ui.form.on('Sales Invoice Item', {
 							$.each(r.message, function(i,v){
 								console.log(v['tax_type'])
 								if (customer_gstin.substring(0, 2) == company_gstin.substring(0, 2)) {
-									if (v['tax_type'] == "C-CGST - " + comapny_abbr.trim()) {
+									if (v['tax_type'] == "CGST - " + comapny_abbr.trim()) {
 										item.cgst = v['tax_rate']
 									}
-									else if (v['tax_type'] == "C-SGST - " + comapny_abbr.trim()) {
+									else if (v['tax_type'] == "SGST - " + comapny_abbr.trim()) {
 										item.sgst = v['tax_rate']
 									}
 
 								} else if(customer_gstin.substring(0, 2) != company_gstin.substring(0, 2)){
-									if (v['tax_type'] == "C-IGST - " + comapny_abbr.trim()) {
+									if (v['tax_type'] == "IGST - " + comapny_abbr.trim()) {
 										item.igst = v['tax_rate']
 									}
 									
