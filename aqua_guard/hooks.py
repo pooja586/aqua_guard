@@ -35,6 +35,11 @@ fixtures = ["Custom Field", "Property Setter", "Print Format", "Report"]
 doctype_js={
 	"Quotation":["customization/quotation/quotation.js"],
 	"Sales Invoice":["customization/sales_invoice/sales_invoice.js"],
+	"Sales Order":["customization/sales_order/sales_order.js"],
+	"Delivery Note":["customization/delivery_note/delivery_note.js"],
+	"Purchase Order":["customization/purchase_order/purchase_order.js"],
+	"Purchase Invoice":["customization/purchase_invoice/purchase_invoice.js"],
+	"Purchase Reciept":["customization/purchase_receipt/purchase_receipt.js"],
 	"Item":["customization/item/item.js"]
 }
 
@@ -90,6 +95,9 @@ doctype_js={
 doc_events = {
 	"Sales Invoice":{
 		"validate": "aqua_guard.custom_method.get_tax_in_words"
+	},
+	"Quotation":{
+		"before_save": "aqua_guard.custom_method.set_taxes"
 	}
 # 	"*": {
 # 		"on_update": "method",
